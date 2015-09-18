@@ -5,9 +5,9 @@
 	<title>ゆめかわいい倉庫</title>
 	<style>
 		body {
-			background-color: #D6D8FF;
 			text-align: center;
 			margin-top: 0;
+			background-image: url("top/kabe.png");
 		}
 		
 		h1{
@@ -69,12 +69,7 @@
 		<div class="top02 tp"></div>
 		<div class="top03 tp"></div>
 		<div class="top-logo"></div>
-		
 	</div>
-	
-	<!--
-	<img src="yumekawaii.jpg" alt="">
-	-->
 	
 	<p>ゆめかわいいフリー素材集</p>
 	
@@ -114,11 +109,10 @@
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script>
 		$(function(){
-			$(".top").on("mousemove", function(e){
+			$(".top03").on("mousemove", function(e){
 				var rect = e.target.getBoundingClientRect();
 				var x = e.clientX - rect.left;
 				var y = e.clientY - rect.top;
-				//console.log(x + "," + y);
 				
 				var posx = x / rect.width - 0.5;
 				var posy = y / rect.height - 0.5;
@@ -128,7 +122,6 @@
 				$(".top03").css("top",  posy * -40);
 				$(".top02").css("top",  posy * -5);
 			});
-			
 		});
 	</script>
 </body>
