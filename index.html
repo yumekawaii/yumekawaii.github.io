@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>ゆめかわいい倉庫</title>
+	<style>
+		body {
+			background-color: #D6D8FF;
+			text-align: center;
+			margin-top: 0;
+		}
+		
+		h1{
+			color: white;
+			text-shadow: 0 0 23px #FF34F9;
+		}
+		
+		img.sozai{
+			width: 33%;
+			margin: 0;
+			padding:0;
+		}
+		
+		
+		.tp{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-size:cover;
+		}
+		
+		.top01{
+			background-image: url("top/001_white.png");
+		}
+		.top02{
+			background-image: url("top/002.png");
+		}
+		.top03{
+			background-image: url("top/003.png");
+		}
+		
+		.top{
+			width: 1000px;
+			height: 1130px;
+			position: relative;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+		
+		.top-logo{
+			position: absolute;
+			width: 600px;
+			height: 600px;
+			margin-left: -300px;
+			left: 50%;
+			top: -50px;
+			background-size:contain;
+			background-image: url("top/yumekawa_logo.png");
+			background-repeat: no-repeat;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="top">
+		<div class="top01 tp"></div>
+		<div class="top02 tp"></div>
+		<div class="top03 tp"></div>
+		<div class="top-logo"></div>
+		
+	</div>
+	
+	<!--
+	<img src="yumekawaii.jpg" alt="">
+	-->
+	
+	<p>ゆめかわいいフリー素材集</p>
+	
+	<img src="y001.png" class="sozai" alt="">
+	<img src="y002.png" class="sozai" alt="">
+	<img src="y003.png" class="sozai" alt="">
+	<img src="y004.png" class="sozai" alt="">
+	<img src="y005.png" class="sozai" alt="">
+	<img src="y006.png" class="sozai" alt="">
+	<img src="y007.png" class="sozai" alt="">
+	<img src="y008.png" class="sozai" alt="">
+	<img src="y009.png" class="sozai" alt="">
+	<img src="y010.png" class="sozai" alt="">
+	<img src="y011.png" class="sozai" alt="">
+	<img src="y012.png" class="sozai" alt="">
+	<img src="y013.png" class="sozai" alt="">
+	<img src="y014.png" class="sozai" alt="">
+	
+	<p>利用規約</p>
+	
+	<ul>
+		<li>改変自由</li>
+		<li>利用報告不要</li>
+		<li>商用可能</li>
+		<li>改変・非改変を問わず、素材自体の商用目的での配布は禁じます</li>
+	</ul>
+	
+	
+	<p>加工元</p>
+	
+	<ul>
+		<li><a href="http://www.priga.jp/">PRIGA</a></li>
+		<li><a href="http://www.ashinari.com/">足成</a></li>
+		<li><a href="http://www.beiz.jp/">BEIZ</a></li>
+		<li><a href="https://www.pakutaso.com/">ぱくたそ</a></li>
+	</ul>
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script>
+		$(function(){
+			$(".top").on("mousemove", function(e){
+				var rect = e.target.getBoundingClientRect();
+				var x = e.clientX - rect.left;
+				var y = e.clientY - rect.top;
+				//console.log(x + "," + y);
+				
+				var posx = x / rect.width - 0.5;
+				var posy = y / rect.height - 0.5;
+				
+				$(".top03").css("left",  posx * -40);
+				$(".top02").css("left",  posx * -5);
+				$(".top03").css("top",  posy * -40);
+				$(".top02").css("top",  posy * -5);
+			});
+			
+		});
+	</script>
+</body>
+</html>
