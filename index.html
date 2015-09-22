@@ -66,8 +66,23 @@
 			background-repeat: no-repeat;
 			display: none;
 		}
-		
+		a {
+			text-decoration: none;
+		}
+		a:visited {
+			color: #C070FC;
+			text-decoration: none;
+		}
+		a:link {
+			color: #C070FC;
+			text-decoration: none;
+		}
+		a:hover{
+			color: #C070FC;
+			text-decoration: underline;
+		}
 	</style>
+	<link rel="stylesheet" href="featherlight.min.css">
 </head>
 <body>
 	<div class="top">
@@ -82,10 +97,10 @@
 	</h2>
 	
 	<div>
-		<a href="illust/p001_min.png" target="_blank">
+		<a data-featherlight="illust/p001_min.png" href="#" target="_blank">
 			<img src="illust/p001_sam.png" alt="ゆめかわツインテ">
 		</a>
-		<a href="illust/p002_min.png" target="_blank">
+		<a data-featherlight="illust/p002_min.png" href="#"  target="_blank">
 			<img src="illust/p002_sam.png" alt="夜のカフェ店員">
 		</a>
 	</div>
@@ -125,7 +140,11 @@
 		Twitterアイコン制作承ります！
 	</p>
 
-	<h3>Link</h3>
+	<h3>
+		<img src="top/icon_link.png" alt="リンク">
+	</h3>
+	
+	
 	<a href="http://www.priga.jp/">PRIGA</a> /
 	<a href="http://www.ashinari.com/">足成</a> /
 	<a href="http://www.beiz.jp/">BEIZ</a> /
@@ -134,6 +153,7 @@
 	
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script src="bounce.min.js"></script>
+	<script src="featherlight.min.js"></script>
 	<script>
 		function bounce(){
 			var bounce = new Bounce();
