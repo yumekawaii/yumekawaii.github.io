@@ -1,89 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
 	<meta charset="UTF-8">
 	<title>ゆめかわ倉庫</title>
-	<style>
-		body {
-			text-align: center;
-			margin-top: 0;
-			background-image: url("top/kabe.png");
-		}
-		
-		h1{
-			color: white;
-			text-shadow: 0 0 23px #FF34F9;
-		}
-		
-		img.sozai{
-			width: 33%;
-			margin: 0;
-			padding:0;
-		}
-		
-		
-		.tp{
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-size:cover;
-		}
-		
-		.top01{
-			background-image: url("top/001_white.png");
-		}
-		.top02{
-			background-image: url("top/002.png");
-		}
-		.top03{
-			background-image: url("top/003.png");
-			width: 1200px;
-			height: 1400px;
-			margin-left: -130px;
-			margin-top: -250px;
-			
-		}
-		
-		.top{
-			width: 1000px;
-			height: 1130px;
-			position: relative;
-			margin: 0 auto;
-			/*overflow: hidden;*/
-		}
-		
-		.top-logo{
-			position: absolute;
-			width: 600px;
-			height: 600px;
-			margin-left: -300px;
-			left: 50%;
-			top: -50px;
-			background-size:contain;
-			background-image: url("top/yumekawa_logo.png");
-			background-repeat: no-repeat;
-			display: none;
-		}
-		a {
-			text-decoration: none;
-		}
-		a:visited {
-			color: #C070FC;
-			text-decoration: none;
-		}
-		a:link {
-			color: #C070FC;
-			text-decoration: none;
-		}
-		a:hover{
-			color: #C070FC;
-			text-decoration: underline;
-		}
-	</style>
+	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="featherlight.min.css">
 </head>
+
 <body>
 	<div class="top">
 		<div class="top01 tp"></div>
@@ -95,21 +19,20 @@
 	<h2>
 		<img src="top/icon_illust.png" alt="イラスト">
 	</h2>
-	
+
 	<div>
 		<a data-featherlight="illust/p001_min.png" href="#" target="_blank">
-			<img src="illust/p001_sam.png" alt="ゆめかわツインテ">
+			<img class="illust" src="illust/p001_sam.png" alt="ゆめかわツインテ">
 		</a>
-		<a data-featherlight="illust/p002_min.png" href="#"  target="_blank">
-			<img src="illust/p002_sam.png" alt="夜のカフェ店員">
+		<a data-featherlight="illust/p002_min.png" href="#" target="_blank">
+			<img class="illust" src="illust/p002_sam.png" alt="夜のカフェ店員">
 		</a>
 	</div>
-	
+
 	<h2>
 		<img src="top/icon_sozai.png" alt="フリー素材">
 	</h2>
 
-	
 	<img src="y001.png" class="sozai" alt="">
 	<img src="y002.png" class="sozai" alt="">
 	<img src="y003.png" class="sozai" alt="">
@@ -124,85 +47,38 @@
 	<img src="y012.png" class="sozai" alt="">
 	<img src="y013.png" class="sozai" alt="">
 	<img src="y014.png" class="sozai" alt="">
-	
 
-	
-	
+	<h3>利用規約</h3>
+	<p>
+		使用は商用・非商用問わず自由です。<br>
+		クレジットを入れる必要もありません。<br>
+		素材を無加工・もしくはほとんど加工せずに販売することは禁止しています。
+	</p>
+
 	<h2>
 		<img src="top/icon_about.png" alt="アバウト">
 	</h2>
-	
-	
+
 	<p>
 		Author: <a href="https://twitter.com/masaka_panda/">古賀</a>
 		<a href="http://pixiv.me/puroyou">pixiv</a>
-		<br>
-		Twitterアイコン制作承ります！
+		<br> Twitterアイコン制作承ります！
 	</p>
 
 	<h3>
 		<img src="top/icon_link.png" alt="リンク">
 	</h3>
-	
-	
+
 	<a href="http://www.priga.jp/">PRIGA</a> /
 	<a href="http://www.ashinari.com/">足成</a> /
 	<a href="http://www.beiz.jp/">BEIZ</a> /
 	<a href="https://www.pakutaso.com/">ぱくたそ</a>
 
-	
+
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script src="bounce.min.js"></script>
 	<script src="featherlight.min.js"></script>
-	<script>
-		function bounce(){
-			var bounce = new Bounce();
-			bounce
-			.scale({
-				from: { x: 0.5, y: 1 },
-				to: { x: 1, y: 1 },
-				easing: "bounce",
-				duration: 2000,
-				delay: 0,
-				stiffness: 1,
-				bounces: 6
-			})
-			.scale({
-				from: { x: 1, y: 0.5},
-				to: { x: 1, y: 1 },
-				easing: "bounce",
-				duration: 3000,
-				delay: 0,
-				bounces: 6
-			})
-			.applyTo(document.querySelectorAll(".top-logo"));
-		}
-		
-		
-		$(function(){
-			$(".top03").on("mousemove", function(e){
-				var rect = e.target.getBoundingClientRect();
-				var x = e.clientX - rect.left;
-				var y = e.clientY - rect.top;
-				
-				var posx = x / rect.width - 0.5;
-				var posy = y / rect.height - 0.5;
-				
-				$(".top03").css("left",  posx * -80);
-				$(".top02").css("left",  posx * -5);
-				$(".top03").css("top",  posy * -40);
-				$(".top02").css("top",  posy * -5);
-			});
-			$(".top-logo").show();
-			
-			$(".top-logo").on("click", function(){
-				bounce();
-			});
-			
-			bounce();
-			
-			
-		});
-	</script>
+	<script src="index.js"></script>
 </body>
+
 </html>

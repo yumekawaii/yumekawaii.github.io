@@ -1,0 +1,80 @@
+body {
+	text-align: center;
+	margin-top: 0;
+	background-image: url("top/kabe.png");
+	color: #8EC7A2;
+}
+
+h1{
+	color: white;
+	text-shadow: 0 0 23px #FF34F9;
+}
+
+img.sozai{
+	width: 33%;
+	margin: 0;
+	padding:0;
+	border-radius: 10px;
+}
+
+.tp{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size:cover;
+}
+
+.top01{
+	background-image: url("top/001_white.png");
+}
+.top02{
+	background-image: url("top/002.png");
+}
+.top03{
+	background-image: url("top/003.png");
+	width: 1200px;
+	height: 1400px;
+	margin-left: -130px;
+	margin-top: -250px;
+}
+
+.top{
+	width: 1000px;
+	height: 1130px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.top-logo{
+	position: absolute;
+	width: 600px;
+	height: 600px;
+	margin-left: -300px;
+	left: 50%;
+	top: -50px;
+	background-size:contain;
+	background-image: url("top/yumekawa_logo.png");
+	background-repeat: no-repeat;
+	display: none;
+}
+a {
+	text-decoration: none;
+}
+a:visited {
+	color: #C070FC;
+	text-decoration: none;
+}
+a:link {
+	color: #C070FC;
+	text-decoration: none;
+}
+a:hover{
+	color: #C070FC;
+	text-decoration: underline;
+}
+
+img.illust {
+	border-radius: 100px;
+}
